@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', defaults={'path': ''}, methods=['GET', 'POST'])
 @app.route('/<path:path>', methods=['GET', 'POST'])
 def proxy(path):
-    target_url = f"http://example.com/{path}"  # Change target URL as needed
+    target_url = f"http://youtube.com/{path}"  # Change target URL as needed
     headers = {key: value for key, value in request.headers if key != 'Host'}
 
     if request.method == 'POST':
